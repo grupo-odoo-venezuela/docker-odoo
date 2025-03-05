@@ -64,6 +64,8 @@ services:
       - odoo_data:/home/odoo/data
       - py3:/usr/local/lib/
       - py:/usr/lib/
+    ports:
+      - ${PORT_SERVICE_HOST_ODOO}:${PORT_SERVICE_CONTAINER_ODOO}
     command: odoo --dev=all 
     labels:
       - traefik.enable=true
