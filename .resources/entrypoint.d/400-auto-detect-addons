@@ -19,9 +19,9 @@ ENTERPRISE_PATH = os.path.join(SOURCES, "enterprise")
 if os.path.isdir(ENTERPRISE_PATH):
     addons.insert(0, os.path.join(ENTERPRISE_PATH))
 
-INTEGRA_PATH = os.path.join(SOURCES, "integra-addons")
-if os.path.isdir(INTEGRA_PATH):
-    addons.insert(0, os.path.join(INTEGRA_PATH))
+# INTEGRA_PATH = os.path.join(SOURCES, "integra-addons")
+# if os.path.isdir(INTEGRA_PATH):
+#     addons.insert(0, os.path.join(INTEGRA_PATH))
 
 THIRD_PATH = os.path.join(SOURCES, "third-party-addons")
 if os.path.isdir(THIRD_PATH):

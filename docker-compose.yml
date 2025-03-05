@@ -28,19 +28,19 @@ services:
       - odoo-db:/var/lib/postgresql/data/pgdata
     networks:
       - binaural
-  pgadmin:
-    container_name: ${PROJECT_NAME}_pgadmin_container
-    image: dpage/pgadmin4
-    ports:
-      - "${PG_ADMIN_HOST_PORT}:${PG_ADMIN_SERVICE_CONTAINER_PORT}"
-    environment:
-      PGADMIN_DEFAULT_EMAIL: binaural.ca@gmail.com
-      PGADMIN_DEFAULT_PASSWORD: odoo
-      PGADMIN_CONFIG_SERVER_MODE: "False"
-    volumes:
-      - odoo-pgadmin:/root/.pgadmin
-    networks:
-      - binaural
+  # pgadmin:
+  #   container_name: ${PROJECT_NAME}_pgadmin_container
+  #   image: dpage/pgadmin4
+  #   ports:
+  #     - "${PG_ADMIN_HOST_PORT}:${PG_ADMIN_SERVICE_CONTAINER_PORT}"
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: odoo@gmail.com
+  #     PGADMIN_DEFAULT_PASSWORD: odoo
+  #     PGADMIN_CONFIG_SERVER_MODE: "False"
+  #   volumes:
+  #     - odoo-pgadmin:/root/.pgadmin
+  #   networks:
+  #     - binaural
   dns:
     image: cytopia/bind:alpine-0.30
     environment:
@@ -64,7 +64,7 @@ services:
       - odoo_data:/home/odoo/data
       - py3:/usr/local/lib/
       - py:/usr/lib/
-    command: odoo --dev=all
+    command: odoo --dev=all 
     labels:
       - traefik.enable=true
       - traefik.frontend.port=8069

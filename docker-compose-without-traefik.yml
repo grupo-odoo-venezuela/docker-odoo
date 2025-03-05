@@ -24,7 +24,6 @@ services:
       - odoo-web:/var/lib/odoo
       - ./src:/home/odoo/src
       - odoo_data:/home/odoo/data
-    command: odoo -u binaural_accountant --dev=all
     labels:
       - traefik.enable=true
       - traefik.frontend.port=8069

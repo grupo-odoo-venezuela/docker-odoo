@@ -29,7 +29,7 @@ Cuando hayas configurado la version dentro del archivo .env, puedes ejecutar el 
     
 Los repo en cuestion son:
  - [Odoo Enterprise](https://github.com/odoo/enterprise) (necesitas ser partner odoo para tener acceso a este repo)
- - [Integra Addons](https://github.com/binaural-dev/integra-addons) (aplica solo para los devs de binaural)
+ <!-- - [Integra Addons](https://github.com/binaural-dev/integra-addons) (aplica solo para los devs de binaural) -->
  - [Third Party Addons](https://github.com/binaural-dev/third-party-addons) (aplica solo para los devs de binaural)
 
  Si no tienes acceso a estos repositorios comunicate con nuestro devops.
@@ -49,7 +49,6 @@ Los repo en cuestion son:
         /repository-1 (un proyecto)
         /repository-2 (otro proyecto)
         /repository-n (otro proyecto mas)
-    integra-addons/
     enterprise/
     third-party-addons/
 ```
