@@ -9,7 +9,7 @@ services:
       - --docker.exposedbydefault=false
     labels:
       - traefik.enable=true
-      - traefik.port=8080
+      - traefik.port=8081
       - traefik.frontend.rule=Host:traefik.localhost
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
@@ -59,6 +59,8 @@ services:
       - dns
       - traefik
     volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
       - odoo-web:/var/lib/odoo
       - ./src:/home/odoo/src
       - odoo_data:/home/odoo/data

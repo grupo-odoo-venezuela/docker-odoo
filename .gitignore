@@ -1,5 +1,5 @@
 .env
-src/enterprise
+src/custom/**/web_enterprise/
 src/third-party-addons
 src/custom/*
 .resources/Dockerfile
