@@ -57,7 +57,9 @@ RUN curl -o odoo.deb -sSL http://nightly.odoo.com/17.0/nightly/deb/odoo_17.0.lat
 
 
 # Install pip packages
-RUN python3 -m pip install --no-cache-dir ebaysdk==2.1.5 pdf417gen==0.7.1 ruff==0.4.7 pandas
+RUN python3 -m pip install --no-cache-dir ebaysdk==2.1.5 pdf417gen==0.7.1 ruff==0.4.7 pandas paramiko
+
+RUN python3 -c "import paramiko; print(paramiko.__version__)"
 
 ADD --chown=${USERNAME} https://raw.githubusercontent.com/odoo/odoo/17.0/requirements.txt /tmp/requirements.txt
 RUN python3 -m pip install --no-cache-dir -r /tmp/requirements.txt
